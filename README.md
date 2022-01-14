@@ -1,0 +1,2 @@
+# Lodash
+Codecademy challenge project
