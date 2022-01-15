@@ -1,6 +1,10 @@
 const _ = {
-    clamp(num, lower, upper) {
-        return Math.min(Math.max(num, lower), upper);
+    clamp: (num, lower, upper) => Math.min(Math.max(num, lower), upper),
+
+    inRange(number, start=0, end) {
+        if (end == undefined) {
+
+        }
     }
 };
 
