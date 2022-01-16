@@ -3,8 +3,16 @@ const _ = {
 
     inRange(number, start=0, end) {
         if (end == undefined) {
-
+            end = start;
+            start = 0;
         }
+        if (start > end) {
+            let temp = end;
+            end = start;
+            start = temp;
+        }
+        let isInRange = (number >= start && number < end) ? true : false;
+        return isInRange;
     }
 };
 
