@@ -12,7 +12,10 @@ const _ = {
             start = temp;
         }
         return (number >= start && number < end) ? true : false; //number in range?
-    }
+    },
+
+    words: (str) => str.split(' '),
+
 };
 
 
