@@ -14,7 +14,14 @@ const _ = {
         return (number >= start && number < end) ? true : false; //number in range?
     },
 
-    words: (str) => str.split(' '),
+    words: (str='') => str.split(' '),
+
+    pad(str, len) {
+        if (str.length >= len) return str;
+        let left = Math.floor((len - str.length) / 2);
+        let right = len - (str.length + left);
+        return `${' '.repeat(left)}${str}${' '.repeat(right)}`;
+    },
 
 };
 
