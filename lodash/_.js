@@ -23,6 +23,15 @@ const _ = {
         return `${' '.repeat(left)}${str}${' '.repeat(right)}`;
     },
 
+    has: (obj, key) => obj[key] != undefined ? true : false,
+
+    invert(obj) {
+        ivertObj = {};
+        obj.forEach(key => {
+            
+        })
+    },
+
 };
 
 
