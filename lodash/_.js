@@ -26,12 +26,22 @@ const _ = {
     has: (obj, key) => obj[key] != undefined ? true : false,
 
     invert(obj) {
-        ivertObj = {};
-        obj.forEach(key => {
-            
-        })
+        invertObj = {};
+        // let entries = Object.entries(obj);
+        // for (let i=0; i < entries.length; i++) {
+        //     let key = entries[i][1];
+        //     let val = entries[i][0];
+        //     invertObj[key] = val;
+        // }
+        // return invertObj;
+        for (let key in obj) {
+            originalVal = obj[key];
+            invertObj[originalVal] = key;
+        }
+        return invertObj;
     },
 
+    
 };
 
 
