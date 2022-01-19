@@ -48,7 +48,10 @@ const _ = {
             if (predicateReturnValue) return key;
         }
         return undefined;
-    }
+    },
+
+    drop: (arr, n=1) => arr.slice(n, arr.length),
+ 
 };
 
 
