@@ -53,10 +53,17 @@ const _ = {
     drop: (arr, n=1) => arr.slice(n, arr.length),
     
     dropWhile(arr, predicate) {
-        let val = arr.findIndex((element, index) => {
-            return !predicate(element, index, arr);
-        });
+        let val = arr.findIndex((element, index) => !predicate(element, index, arr));
         return this.drop(arr, val);
+    },
+
+    chunk(arr, size=1) {
+        let chunkArr = [];
+        for(let i=0; i<arr.length; i+=size) {
+            let chunk = arr.slice(i, size+i);
+            chunkArr.push(chunk);
+        }
+        return chunkArr;
     }
 };
 
